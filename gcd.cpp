@@ -10,6 +10,14 @@ int gcd(int a, int b){
     }
     return hcf;
 }
+
+int hcf(int a, int b){
+    for(int  i = 1; i <= min(a,b); i++){
+        if(a % i == 0 && b % i == 0){
+            return i;
+        }
+    }
+}
 int main(){
     int a;
     cout<<"Enter 1st number :";
@@ -18,4 +26,6 @@ int main(){
     cout<<"Enter 2nd number :";
     cin>>b;
     cout<<gcd(a,b);
+
+    cout<<endl<<hcf(a,b);
 }
